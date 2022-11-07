@@ -1,0 +1,57 @@
+body {
+  margin: 0px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 25px;
+  background-color: rgb(151, 147, 147);
+  height: 2000px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  font-family: 'Fjalla One', sans-serif;
+  width: 55%;
+
+}
+
+.page_header {
+  min-height: 20px;
+  padding: 5px;
+  color: white;
+  background-position: 10px 0, 10px 0, 0 0, 0 0;
+  background-size: 20px 20px;
+  box-shadow: 0 0 5px 0 #333333;
+  background-color: rgb(97, 158, 23);
+
+  display: flex;
+
+}
+
+.logo_header {
+  width: 5%;
+  padding: 5px 0 0 10px;
+}
+
+.logo_header img {
+  border: 3px solid #34495e;
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+
+}
+
+.nav_header {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav_header nav a {
+  margin-right: 100px;
+}
+
+a:last-child {
+  margin-right: 0px;
+}
