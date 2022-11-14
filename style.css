@@ -2,7 +2,7 @@ body {
   margin: 0px;
   font-family: 'Oswald', sans-serif;
   font-size: 25px;
-  background-color: rgb(151, 147, 147);
+  /* background-color: rgb(151, 147, 147); */
   height: 2000px;
 }
 
@@ -55,3 +55,11 @@ body {
 a:last-child {
   margin-right: 0px;
 }
+
+main {
+  margin: 0px;
+  background: url("back.jpg") no-repeat;
+  background-size: 100% auto;
+}
+
+.main-header {}
