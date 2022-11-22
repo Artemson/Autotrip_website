@@ -33,7 +33,105 @@
       </div>
     </header>
     <main>
-      <div class="main-header"><h1>Мы рады приветствовать на нашем сайте!</h1></div>
+      <div class="main_header">
+        <h1>Мы рады приветствовать вас на нашем сайте!</h1>
+      </div>
+      <div class="main_content_info">
+        <div class="company">
+          Autotrip - Молодая и быстрорастущая компания по поиску авиабилетов.
+        </div>
+        <div class="year">Была основана в 2022 году.</div>
+        <div class="fathers">
+          Наши отцы-основатели:<br />
+          Ветлугаев Артём и Бандурин Никита.
+        </div>
+        <div class="prototype">
+          Данная страница является прототипом будущего сайта, который будет радовать наших клиентов
+          всё больше и больше!
+        </div>
+        <div></div>
+        <div class="however">
+          А пока, вы можете заполнить форму для рассылки наших новостей и горячих путёвок!
+        </div>
+      </div>
+      <div class="forma">
+        <div class="forma_header">
+          <h2>Заполните анкету!</h2>
+        </div>
+        <form action="" method="post" oninput="daysoutput.value=rating.value">
+          <fieldset>
+            <legend>Личные данные</legend>
+            <div class="half-width">
+              <label for="id">ID отзыва</label>
+              <input type="number" value="12345" id="id" disabled />
+            </div>
+            <div class="half-width">
+              <label for="name">Имя путешественника</label>
+              <input type="text" name="name" id="name" value="Кекс" />
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Выбор направления</legend>
+            <div class="half-width">
+              <label for="country">Страна</label>
+              <input type="text" id="country" name="country" />
+            </div>
+            <div class="half-width">
+              <label for="country">Город</label>
+              <input type="text" id="country" name="country" />
+            </div>
+            <div class="half-width">
+              <label for="rating">Оценка поездки</label>
+              0
+              <input type="range" name="rating" id="rating" min="0" max="10" value="10" />
+              10
+            </div>
+            <div class="half-width output-area">
+              <output name="daysoutput">10</output>
+            </div>
+            <label for="review">Подробнее</label>
+            <textarea id="review" name="review" rows="5">Это было просто мяу!</textarea>
+          </fieldset>
+          <fieldset>
+            <legend>Оценка отеля</legend>
+            <div class="half-width">
+              <label for="hotel">Название отеля</label>
+              <input type="text" placeholder="Название по-английски" id="hotel" name="hotel" />
+            </div>
+            <div class="half-width">
+              <label for="arrival_date">Дата въезда</label>
+              <input
+                type="text"
+                placeholder="В формате дд-мм-гггг"
+                id="arrival_date"
+                name="arrival_date"
+              />
+            </div>
+            <div class="one-third-width">
+              <label for="color">Цвет кроватки</label>
+              <input type="color" id="color" name="color" value="#ff0000" />
+            </div>
+            <div class="two-third-width">
+              <label for="dish_rating">Оценка обедов</label>
+              <select id="dish-rating" name="dish_rating">
+                <option selected>Подушечки оближешь</option>
+              </select>
+            </div>
+            <label for="fish">Самая вкусная рыба</label>
+            <select multiple>
+              <option selected>Норвежский лосось</option>
+              <option>Зубатка</option>
+              <option selected>Морской окунь</option>
+              <option>Карась</option>
+              <option>Зеркальный карп</option>
+            </select>
+          </fieldset>
+          <div class="buttons">
+            <input type="submit" value="Оценить" />
+            <input type="reset" value="Сбросить" />
+          </div>
+        </form>
+      </div>
     </main>
   </body>
 </html>
