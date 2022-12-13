@@ -15,6 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap"
       rel="stylesheet"
     />
+    <link rel="shortcut icon" href="logo.png" />
   </head>
   <body>
     <header class="page_header">
@@ -26,48 +27,74 @@
       </div>
       <div class="nav_header">
         <nav>
-          <a>Главная</a>
-          <a>Билеты</a>
-          <a>О компании</a>
+          <a href="#mains">Главная</a>
+          <a href="#form">Анкета</a>
+          <a href="#contacts">Контакты</a>
         </nav>
       </div>
     </header>
     <main>
-      <div class="main_header">
-        <h1>Мы рады приветствовать вас на нашем сайте!</h1>
+      <div class="general">
+        <div id="mains" class="main_header">
+          <h1>Мы рады приветствовать вас на нашем сайте!</h1>
+        </div>
+        <div class="main_content_info">
+          <div class="company">
+            <p>Autotrip - Молодая и быстрорастущая компания по покупке авиабилетов</p>
+          </div>
+          <div class="year">
+            <p>Была основана в 2022 году</p>
+          </div>
+          <div class="fathers">
+            <p>
+              Наши отец-основатель:<br />
+              Ветлугаев Артём
+            </p>
+          </div>
+          <div class="prototype">
+            <p>
+              Данная страница является прототипом будущего сайта, который будет радовать наших
+              клиентов всё больше и больше!
+            </p>
+          </div>
+          <div></div>
+          <div class="however">
+            <p>А пока, вы можете заполнить форму для рассылки наших новостей и горячих путёвок!</p>
+          </div>
+        </div>
       </div>
-      <div class="main_content_info">
-        <div class="company">
-          Autotrip - Молодая и быстрорастущая компания по поиску авиабилетов.
-        </div>
-        <div class="year">Была основана в 2022 году.</div>
-        <div class="fathers">
-          Наши отцы-основатели:<br />
-          Ветлугаев Артём и Бандурин Никита.
-        </div>
-        <div class="prototype">
-          Данная страница является прототипом будущего сайта, который будет радовать наших клиентов
-          всё больше и больше!
-        </div>
-        <div></div>
-        <div class="however">
-          А пока, вы можете заполнить форму для рассылки наших новостей и горячих путёвок!
-        </div>
-      </div>
-      <div class="forma">
+      <div id="form" class="forma">
         <div class="forma_header">
-          <h2>Заполните анкету!</h2>
+          <h1>Заполните анкету</h1>
         </div>
-        <form action="" method="post" oninput="daysoutput.value=rating.value">
+        <form
+          action=""
+          method="post"
+          oninput="daysoutput.value=rating.value"
+          onsubmit="alert('Спасибо за заполнение анкеты! Мы скоро с вами свяжемся');"
+        >
           <fieldset>
             <legend>Личные данные</legend>
             <div class="half-width">
-              <label for="id">ID отзыва</label>
+              <label for="id">ID анкеты</label>
               <input type="number" value="12345" id="id" disabled />
             </div>
             <div class="half-width">
-              <label for="name">Имя путешественника</label>
-              <input type="text" name="name" id="name" value="Кекс" />
+              <label for="name">ФИО</label>
+              <input type="text" name="name" id="name" />
+            </div>
+            <div class="half-width">
+              <label for="passport">Серия и номер паспорта</label>
+              <input type="text" id="passport" name="passport" maxlength="10" minlength="9" />
+            </div>
+            <div class="half-width">
+              <label for="arrival_date">Дата рождения</label>
+              <input
+                type="text"
+                placeholder="В формате дд-мм-гггг"
+                id="arrival_date"
+                name="arrival_date"
+              />
             </div>
           </fieldset>
           <fieldset>
@@ -77,20 +104,30 @@
               <input type="text" id="country" name="country" />
             </div>
             <div class="half-width">
-              <label for="country">Город</label>
-              <input type="text" id="country" name="country" />
+              <label for="city">Город</label>
+              <input type="text" id="city" name="city" />
             </div>
             <div class="half-width">
-              <label for="rating">Оценка поездки</label>
+              <label for="trip">Номер рейса</label>
+              <input type="text" id="trip" name="trip" maxlength="7" />
+            </div>
+            <div class="half-width">
+              <label for="departure">Дата и время вылета</label>
+              <input type="datetime-local" id="departure" name="departure" />
+            </div>
+            <label for="rating">Оценка поездки</label>
+            <div class="flexim">
               0
-              <input type="range" name="rating" id="rating" min="0" max="10" value="10" />
-              10
+              <div class="half-width">
+                <input type="range" name="rating" id="rating" min="0" max="10" value="5" />
+                10
+              </div>
+              <div class="output-area">
+                <output name="daysoutput">5</output>
+              </div>
             </div>
-            <div class="half-width output-area">
-              <output name="daysoutput">10</output>
-            </div>
-            <label for="review">Подробнее</label>
-            <textarea id="review" name="review" rows="5">Это было просто мяу!</textarea>
+            <label for="review_trip">Подробнее</label>
+            <textarea id="review_trip" name="review_trip" rows="5"></textarea>
           </fieldset>
           <fieldset>
             <legend>Оценка отеля</legend>
@@ -107,24 +144,8 @@
                 name="arrival_date"
               />
             </div>
-            <div class="one-third-width">
-              <label for="color">Цвет кроватки</label>
-              <input type="color" id="color" name="color" value="#ff0000" />
-            </div>
-            <div class="two-third-width">
-              <label for="dish_rating">Оценка обедов</label>
-              <select id="dish-rating" name="dish_rating">
-                <option selected>Подушечки оближешь</option>
-              </select>
-            </div>
-            <label for="fish">Самая вкусная рыба</label>
-            <select multiple>
-              <option selected>Норвежский лосось</option>
-              <option>Зубатка</option>
-              <option selected>Морской окунь</option>
-              <option>Карась</option>
-              <option>Зеркальный карп</option>
-            </select>
+            <label for="review_hotel">Подробнее</label>
+            <textarea id="review_hotel" name="review_hotel" rows="5"></textarea>
           </fieldset>
           <div class="buttons">
             <input type="submit" value="Оценить" />
@@ -133,5 +154,46 @@
         </form>
       </div>
     </main>
+    <footer class="footer" id="contacts">
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <ul class="social-icon">
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="#">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="#">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="#">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="#">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </li>
+      </ul>
+      <ul class="menu">
+        <li class="menu__item"><a class="menu__link" href="#mains">Главная</a></li>
+        <li class="menu__item"><a class="menu__link" href="#form">Анкета</a></li>
+        <li class="menu__item"><a class="menu__link" href="#contacts">Контакты</a></li>
+      </ul>
+      <p>&copy;2022 Autotrip | All Rights Reserved</p>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
 </html>

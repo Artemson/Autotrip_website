@@ -2,19 +2,21 @@ h1,
 p,
 body {
   margin: 0px;
+
 }
 
 body {
   font-family: 'Oswald', sans-serif;
   font-size: 25px;
   height: 2000px;
+  background-color: rgba(113, 113, 113, 0.778);
 }
 
 .title {
   display: flex;
   align-items: center;
   font-family: 'Fjalla One', sans-serif;
-  width: 55%;
+  width: 60%;
 }
 
 .page_header {
@@ -25,8 +27,8 @@ body {
   color: white;
   background-size: 20px 20px;
   background-color: rgb(97, 158, 23);
-
   display: flex;
+  text-shadow: 1px 1px rgb(0, 0, 0);
 
 }
 
@@ -53,77 +55,92 @@ body {
 
 .nav_header nav a {
   margin-right: 80px;
+  text-shadow: 1px 1px black;
+}
+
+.nav_header nav a:hover {
+  color: #ffffff;
+  text-decoration: underline;
 }
 
 a:last-child {
   margin-right: 0px;
 }
 
-main {
+a:active,
+a:hover,
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.general {
   background: url("back.jpg") no-repeat;
   background-size: 100% auto;
   font-family: 'Fjalla One', sans-serif;
   height: 900px;
-  background-size: 100% 100%;
+  display: block;
 }
 
-main:before {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 900px;
-  position: absolute;
-  top: 80px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, .5);
-}
 
 .main_header {
   filter: brightness(1);
   color: rgb(238, 238, 238);
-  padding-top: 180px;
+  padding-top: 150px;
   text-align: center;
   letter-spacing: .1.5rem;
-  margin-bottom: 250px;
+  margin-bottom: 150px;
   font-size: 28px;
   font-family: 'Fjalla One', sans-serif;
+  text-shadow: 1px 1px rgb(0, 0, 0);
 }
 
 .main_content_info {
   font-size: 22px;
   width: 100%;
   height: auto;
-  filter: brightness(1);
   color: rgb(237, 236, 236);
   gap: 150px 30px;
   display: grid;
   grid-template-areas: "company year fathers"
     "prototype . however";
-  margin-bottom: 69px;
+  margin-bottom: 199px;
+  text-shadow: 1px 1px rgb(0, 0, 0);
 }
 
 .main_content_info div:not(:empty) {
   padding: 10px;
-  text-align: center;
   background-color: rgba(113, 113, 113, 0.778);
   border: 0px solid rgba(0, 0, 0, .5);
   border-radius: 105px;
   margin-left: 50px;
   margin-right: 50px;
+  height: 80px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .forma {
-  background-color: rgba(113, 113, 113, 0.778);
   height: auto;
+  width: 100%;
+  margin-bottom: 200px;
+
 }
 
 .forma .forma_header {
   text-align: center;
-  padding-top: 100px;
+  margin-top: 18 0px;
   font-family: 'Oswald', sans-serif;
-
+  color: white;
+  letter-spacing: .1.5rem;
+  margin-bottom: 100px;
+  font-size: 28px;
+  font-family: 'Fjalla One', sans-serif;
+  margin: 100px;
+  text-shadow: 1px 1px rgb(0, 0, 0);
 }
 
 
@@ -131,7 +148,6 @@ form {
   width: 70%;
   margin: 0 auto;
   padding: 20px;
-
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 0 10px #cccccc;
@@ -175,11 +191,12 @@ select {
 
 output {
   display: inline-block;
-  width: 30px;
-  height: 20px;
+  width: 35px;
+  height: 35px;
   margin: 0 5px 10px 0;
-
   text-align: center;
+  margin-top: 7%;
+  vertical-align: middle;
 }
 
 select[multiple] {
@@ -239,7 +256,7 @@ input[disabled] {
 }
 
 .output-area {
-  vertical-align: top;
+  vertical-align: middle;
 }
 
 .buttons {
@@ -248,31 +265,137 @@ input[disabled] {
   text-align: center;
 }
 
-body {
-  min-width: 553px;
+
+.flexim {
+  display: flex;
+  vertical-align: middle;
 }
 
-main {
-  min-height: 400px;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 
-/* .main_content_info {
-  font-size: 32px;
-  width: 700px;
-  filter: brightness(1);
-  color: rgb(237, 236, 236);
-  padding: 20px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
 
+.footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.main_content_info ul {
-  list-style-type: none;
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
 }
 
-.main_content_info li {
-  margin-bottom: 30px;
-} */
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+
+  100% {
+    background-positon-x: 0px;
+  }
+}
